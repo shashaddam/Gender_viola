@@ -6,9 +6,9 @@
     <title>Edukasi AR: Gender</title>
     <!-- Memuat Tailwind CSS untuk styling dasar UI/Instruksi -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Memuat A-Frame dan AR.js (A-Frame untuk 3D, AR.js untuk pengenalan Marker) -->
+    <!-- MENGGANTI TAUTAN KE CDNJS UNTUK STABILITAS MAKSIMUM -->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ar.js/3.4.0/aframe/build/aframe-ar.min.js"></script>
     <style>
         /* Mengatur agar elemen UI berada di atas kamera AR */
         #ui-overlay {
@@ -37,7 +37,7 @@
     <!-- 1. A-ASSETS: Tempat untuk memuat aset (video, gambar) sebelum digunakan -->
     <a-assets>
         <!-- 
-            MENGGANTI SRC DENGAN VIDEO MP4 BARU: Gender.mp4
+            VIDEO ASSET 
         -->
         <video id="videoAnimasi" preload="auto" loop="true" src="Gender.mp4" playsinline webkit-playsinline crossorigin="anonymous"></video>
     </a-assets>
@@ -47,12 +47,12 @@
         id="scene"
         vr-mode-ui="enabled: false" 
         loading-screen="enabled: false"
-        arjs='sourceType: webcam; detectionMode: mono; cameraParametersUrl: https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/camera-parameters.zip;'
+        arjs='sourceType: webcam; detectionMode: mono; cameraParametersUrl: https://cdnjs.cloudflare.com/ajax/libs/ar.js/3.4.0/aframe/build/camera-parameters.zip;'
     >
         
         <!-- 3. A-MARKER: Mendefinisikan Target Gambar (Image Target) -->
         <!-- 
-            MENGGANTI URL DENGAN FILE .PATT BARU: Gender.patt
+            MARKER ASSET
         -->
         <a-marker type='pattern' url='Gender.patt'>
             
